@@ -1,6 +1,9 @@
 #ifndef __RN_TYPE_H__
 #define __RN_TYPE_H__
 
+#define TRUE               1
+#define FALSE              0
+
 typedef void               VOID;
 typedef char               BYTE;
 typedef char               CHAR;
@@ -11,6 +14,9 @@ typedef long               LONG;
 typedef long long          LLONG;
 typedef float              FLOAT;
 typedef double             DOUBLE;
+
+typedef unsigned int       SIZE;
+typedef unsigned long      SIZE_T;
 
 typedef char*              LPSTR;
 typedef const char*        LPCSTR;

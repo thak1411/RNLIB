@@ -12,8 +12,8 @@ SET ( OUTPUT_ELF
     "${CMAKE_PROJECT_NAME}-${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.out"
 )
 SET ( SRC_FILES
-    test.cc
-    RN_MEMORY/rn_memory.cc
+    ../test.cc
+    ../../RN_MEMORY/rn_memory.cc
 )
 
 # 컴파일러 #

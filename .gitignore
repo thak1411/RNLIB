@@ -1,7 +1,8 @@
-/CMakeCache.txt
-/cmake_install.cmake
-/CMakeFiles/
-/Makefile
+*/CMakeCache.txt
+*/cmake_install.cmake
+*/CMakeFiles/
+*/Makefile
+*/Debug
 
 .DS_STORE
 *.out
