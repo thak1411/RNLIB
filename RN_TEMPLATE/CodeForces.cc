@@ -29,15 +29,14 @@ using vpl = vector<pll>;
 #define s second
 #define sz(s) (int)(s).size()
 #define pb push_back
-#define FOR(i, e) for(int i=0;i<(e);++i)
 #define FOR(i, b, e) for(int i=(b);i<(e);++i)
 #define FORI(i, b, e) for(int i=(b);i>(e);--i)
 #define FOREACH(i, t) for(auto&i:t)
 #define SET(s, d, sz) for(int i=0;i<(sz);++i)s[i]=d;
 #define GET(s, sz) for(int i=0;i<(sz);++i)cin>>s[i];
 #define MOD 1000000007
-template<typename T>bool amax(T& i, T j){return i < j ? i = j, 1 : 0;}
-template<typename T>bool amin(T& i, T j){return i > j ? i = j, 1 : 0;}
+template<typename T>bool amax(T& i, T j){return i<j?i=j,1:0;}
+template<typename T>bool amin(T& i, T j){return i>j?i=j,1:0;}
 ll rnmul(ll x,ll y){return 1LL*x*y%MOD;}
 ll rnpow(ll x,ll y){ll res=1;for(;y;y>>=1LL){if(y&1LL)res=rnmul(res,x);x=rnmul(x,x);}return res;}
 ll rnfac(ll x){if(x<1)return 1;ll res=1;for(;x;)res*=x--;return res;}
