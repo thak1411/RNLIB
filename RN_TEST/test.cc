@@ -1,4 +1,4 @@
-#include "../RN_MEMORY/rn_memory.h"
+#include "../RN_MEMORY/rn_memory.hpp"
 #include "test.h"
 
 int main() {
