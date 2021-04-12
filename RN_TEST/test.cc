@@ -14,19 +14,20 @@ namespace rn {
     VOID testMemAlloc() {
         puts("\n\n [ TEST Memory Allocate ] ");
         puts(" > Before Make A");
-        A* a = new(rn::MEMOWNER_A) A(3);
+        A* a = new("Alloc A") A(3);
         puts(" > After Make A");
         delete a;
         puts(" > Delete A");
-        rn::printMemoryInfo(); // if (rn::getMemCount() > 0) {}
+        rn::getMemoryInfo(); // if (rn::getMemCount() > 0) {}
     }
     VOID testMemAlloc2() {
         puts("\n\n [ TEST Memory Allocate2 ] ");
         puts(" > Before Make A");
-        A* a = new(rn::MEMOWNER_A) A(3);
+        A* a = new("Alloc A in 2") A(3);
         puts(" > After Make A");
-        // delete a;
-        // puts(" > Delete A");
-        rn::printMemoryInfo(); // if (rn::getMemCount() > 0) {}
+        rn::getMemoryInfo(); // if (rn::getMemCount() > 0) {}
+        delete a;
+        puts(" > Delete A");
+        rn::getMemoryInfo(); // if (rn::getMemCount() > 0) {}
     }
 }

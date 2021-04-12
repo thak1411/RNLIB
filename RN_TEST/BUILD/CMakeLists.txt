@@ -13,7 +13,6 @@ SET ( OUTPUT_ELF
 )
 SET ( SRC_FILES
     ../test.cc
-    ../../RN_MEMORY/rn_memory.cc
 )
 
 # 컴파일러 #
