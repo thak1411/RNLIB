@@ -34,7 +34,7 @@ namespace rn {
  * Overloading New Operator For Debug Memory
  * T* t = new("DEBUG MESSAGE") T;
  */
-LPVOID operator new(SIZE_T sz, std::string owner) {
+LPVOID operator new(SIZE_T sz, const std::string& owner) {
     LPVOID block;
     if ((block = std::malloc(sz)) != NULL) rn::memList.push_back(std::make_pair(block, owner));
     else fprintf(stderr, "Mem Alloc Error. Req=%lu, Owner=%s\n", sz, owner.c_str());
@@ -47,7 +47,7 @@ LPVOID operator new(SIZE_T sz, std::string owner) {
  * Overloading New[] Operator For Debug Memory
  * T* t = new("DEBUG MESSAGE") T[N];
  */
-LPVOID operator new[](SIZE_T sz, std::string owner) {
+LPVOID operator new[](SIZE_T sz, const std::string& owner) {
     LPVOID block;
     if ((block = std::malloc(sz)) != NULL) rn::memList.push_back(std::make_pair(block, owner));
     else fprintf(stderr, "Mem Alloc Error. Req=%lu, Owner=%s\n", sz, owner.c_str());
@@ -93,6 +93,9 @@ VOID operator delete[](LPVOID block) noexcept {
  * Default New Operator
  */
 LPVOID operator new(SIZE_T sz, LPCSTR owner) {
+    return std::malloc(sz);
+}
+LPVOID operator new(SIZE_T sz, const std::string& owner) {
     return std::malloc(sz);
 }
 #endif // __MEMDEBUG__ //
